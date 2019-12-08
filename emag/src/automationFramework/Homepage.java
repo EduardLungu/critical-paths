@@ -5,18 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Homepage {
-
-	public static void main(String[] args) throws InterruptedException {
-		 //Create a new instance of ChromeDriver
-		 WebDriver driver = new ChromeDriver();
+	public static void checkHomepage(WebDriver driverToken) {
+		
+		WebDriver driver = driverToken;
+		//Print a message that opening was successful
+		System.out.println("Successfully opened the eMAG Homepage.");
 		 
-		 //Launch the emag homepage
-		 driver.get("http://www.emag.ro/homepage");
-		 
-		 //Print a message that opening was successful
-		 System.out.println("Successfully opened the eMAG Homepage.");
-		 
-		 //Check website title
+		 //Check the website title
 		 String Title = driver.getTitle();
 		 if(Title.equals("eMAG.ro - Libertate în fiecare zi"))
 			 System.out.println("The title is correct.");
@@ -121,7 +116,6 @@ public class Homepage {
 		 
 		 //Close the window
 		 driver.quit();
-		 System.out.println("Successfully closed the eMAG Homepage.");
+		 System.out.println("Successfully closed the eMAG Homepage.");		
 	}
-
 }
