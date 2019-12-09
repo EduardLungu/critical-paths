@@ -112,10 +112,6 @@ public class Homepage {
 		 if(driver.findElement(By.className("footer-default")).isDisplayed())
 			 System.out.println("The footer is displayed.");
 		 else
-			 System.out.println("The footer is not displayed.");
-		 
-		 //Close the window
-		 driver.quit();
-		 System.out.println("Successfully closed the eMAG Homepage.");		
+			 System.out.println("The footer is not displayed.");		
 	}
 }
